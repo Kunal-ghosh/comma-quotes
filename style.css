@@ -153,7 +153,7 @@ textarea::placeholder {
     top: 20px;
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
-    width: 31vw;
+    width: 25vw;
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
