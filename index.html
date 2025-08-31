@@ -33,135 +33,142 @@
 
 <body>
     <div class="container">
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <h1>Comma Quote - The Online Comma Separator</h1>
+                <!-- <p class="subtitle">Free tool to format text with customizable separators and quotes</p> -->
 
-        <header>
-            <h1>Comma Quote - The Online Comma Separator</h1>
-            <!-- <p class="subtitle">Free tool to format text with customizable separators and quotes</p> -->
-
-            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-                <span class="theme-icon">🌙</span>
-            </button>
-        </header>
-        <!--         <nav>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </header>
+            <!--         <nav>
             <a href="#" class="nav-link active">Home</a>
             <a href="#" class="nav-link">About</a>
             <a href="#" class="nav-link">FAQ</a>
         </nav> -->
-        <div class="container-inner">
-            <!-- <main> -->
-            <div class="tool-container">
-                <div class="input-output-section">
-                    <div class="input-section">
-                        <label for="input-text">Input</label>
-                        <textarea id="input-text"
-                            placeholder="Enter your text here (one item per line or separated by spaces/commas)"
-                            rows="8"></textarea>
-                    </div>
-                    <div class="output-section">
-                        <label for="output-text">Output</label>
-                        <div class="output-actions">
-                            <button id="copy-btn" type="button">Copy to Clipboard</button>
-                            <button id="clear-btn" type="button">Clear All</button>
+            <div class="container-inner">
+                <!-- <main> -->
+                <div class="tool-container">
+                    <div class="input-output-section">
+                        <div class="nav-tabs">
+                            <li><a href="index.html" class="nav-tab active">Comma Quote</a></li>
+                            <li><a href="vin-generator.html" class="nav-tab">VIN Generator</a></li>
                         </div>
+                        <div class="input-output-only">
+                            <div class="input-section">
+                                <label for="input-text">Input</label>
+                                <textarea id="input-text"
+                                    placeholder="Enter your text here (one item per line or separated by spaces/commas)"
+                                    rows="8"></textarea>
+                            </div>
+                            <div class="output-section">
+                                <label for="output-text">Output</label>
+                                <div class="output-actions">
+                                    <button id="copy-btn" type="button">Copy to Clipboard</button>
+                                    <button id="clear-btn" type="button">Clear All</button>
+                                </div>
 
-                        <textarea id="output-text" readonly placeholder="Formatted output will appear here..."
-                            rows="8"></textarea>
-                    </div>
-                </div>
-                <div class="options-section">
-                    <h3>Options</h3>
-
-                    <div class="option-group">
-                        <label for="separator">Separator Character</label>
-                        <select id="separator">
-                            <option value=",">Comma (,)</option>
-                            <option value=";">Semicolon (;)</option>
-                            <option value="|">Pipe (|)</option>
-                            <option value=" ">Space ( )</option>
-                            <option value="\n">New Line</option>
-                            <option value="\t">Tab</option>
-                        </select>
-                    </div>
-
-                    <div class="option-group">
-                        <label>Quote Style</label>
-                        <div class="quote-buttons">
-                            <button type="button" class="quote-btn" data-quote="none">No Quote</button>
-                            <button type="button" class="quote-btn active" data-quote="single">Single Quote</button>
-                            <button type="button" class="quote-btn" data-quote="double">Double Quote</button>
+                                <textarea id="output-text" readonly placeholder="Formatted output will appear here..."
+                                    rows="8"></textarea>
+                            </div>
                         </div>
                     </div>
+                    <div class="options-section">
+                        <h3>Options</h3>
 
-                    <div class="option-group">
-                        <label>
-                            <input type="checkbox" id="trim-whitespace" checked>
-                            Trim Whitespace
-                        </label>
+                        <div class="option-group">
+                            <label for="separator">Separator Character</label>
+                            <select id="separator">
+                                <option value=",">Comma (,)</option>
+                                <option value=";">Semicolon (;)</option>
+                                <option value="|">Pipe (|)</option>
+                                <option value=" ">Space ( )</option>
+                                <option value="\n">New Line</option>
+                                <option value="\t">Tab</option>
+                            </select>
+                        </div>
+
+                        <div class="option-group">
+                            <label>Quote Style</label>
+                            <div class="quote-buttons">
+                                <button type="button" class="quote-btn" data-quote="none">No Quote</button>
+                                <button type="button" class="quote-btn active" data-quote="single">Single Quote</button>
+                                <button type="button" class="quote-btn" data-quote="double">Double Quote</button>
+                            </div>
+                        </div>
+
+                        <div class="option-group">
+                            <label>
+                                <input type="checkbox" id="trim-whitespace" checked>
+                                Trim Whitespace
+                            </label>
+                        </div>
+
+                        <div class="option-group">
+                            <label>
+                                <input type="checkbox" id="remove-empty" checked>
+                                Remove Empty Items
+                            </label>
+                        </div>
                     </div>
 
-                    <div class="option-group">
-                        <label>
-                            <input type="checkbox" id="remove-empty" checked>
-                            Remove Empty Items
-                        </label>
-                    </div>
-                </div>
-
-                <!-- Ad Space - Right Sidebar -->
-                <div class="ad-sidebar">
-                    <div class="ad-container ad-right">
-                        <!-- <ins class="adsbygoogle"
+                    <!-- Ad Space - Right Sidebar -->
+                    <div class="ad-sidebar">
+                        <div class="ad-container ad-right">
+                            <!-- <ins class="adsbygoogle"
                         style="display:block"
                         data-ad-client="ca-pub-2975191454646101"
                         data-ad-slot="XXXXXXXXXX"
                         data-ad-format="auto"
                         data-full-width-responsive="true"></ins> -->
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <footer>
-                <p>&copy; 2024 Comma Quote Tool | <a href="privacy-policy.html">Privacy Policy</a> | Created by <a
-                        href="https://github.com/Kunal-ghosh">Kunal Ghosh</a></p>
-            </footer>
-            <!-- </main> -->
-            <!-- Additional Content for SEO and AdSense -->
-            <section class="info-section">
-                <div class="info-content">
-                    <h2>About Comma Quote Tool</h2>
-                    <p>Comma Quote is a free online text formatting tool that helps you convert lists of items into
-                        properly
-                        formatted, comma-separated values with customizable quote styles. Whether you're working with
-                        data, creating
-                        lists, or formatting text for programming, our tool makes it quick and easy.</p>
+                <footer>
+                    <p>&copy; 2024 Comma Quote Tool | <a href="privacy-policy.html">Privacy Policy</a> | Created by <a
+                            href="https://github.com/Kunal-ghosh">Kunal Ghosh</a></p>
+                </footer>
+                
+                <section class="info-section">
+                    <div class="info-content">
+                        <h2>About Comma Quote Tool</h2>
+                        <p>Comma Quote is a free online text formatting tool that helps you convert lists of items into
+                            properly
+                            formatted, comma-separated values with customizable quote styles. Whether you're working
+                            with
+                            data, creating
+                            lists, or formatting text for programming, our tool makes it quick and easy.</p>
 
-                    <h3>Features:</h3>
-                    <ul>
-                        <li>Multiple separator options (comma, semicolon, pipe, etc.)</li>
-                        <li>Quote style customization (none, single, double quotes)</li>
-                        <li>Real-time text processing</li>
-                        <li>Copy to clipboard functionality</li>
-                        <li>Mobile-friendly responsive design</li>
-                        <li>Dark mode support</li>
-                    </ul>
+                        <h3>Features:</h3>
+                        <ul>
+                            <li>Multiple separator options (comma, semicolon, pipe, etc.)</li>
+                            <li>Quote style customization (none, single, double quotes)</li>
+                            <li>Real-time text processing</li>
+                            <li>Copy to clipboard functionality</li>
+                            <li>Mobile-friendly responsive design</li>
+                            <li>Dark mode support</li>
+                        </ul>
 
-                    <h3>How to Use:</h3>
-                    <ol>
-                        <li>Enter your text in the input area (one item per line)</li>
-                        <li>Choose your preferred separator from the dropdown</li>
-                        <li>Select quote style using the buttons</li>
-                        <li>Copy the formatted output to your clipboard</li>
-                    </ol>
-                </div>
-            </section>
-            <!-- <footer>
+                        <h3>How to Use:</h3>
+                        <ol>
+                            <li>Enter your text in the input area (one item per line)</li>
+                            <li>Choose your preferred separator from the dropdown</li>
+                            <li>Select quote style using the buttons</li>
+                            <li>Copy the formatted output to your clipboard</li>
+                        </ol>
+                    </div>
+                </section>
+                <!-- <footer>
             <p>&copy; 2024 Comma Quote Tool | <a href="privacy-policy.html">Privacy Policy</a> | Created by <a
                     href="https://github.com/Kunal-ghosh">Kunal Ghosh</a></p>
         </footer> -->
+            </div>
         </div>
-    </div>
 
-    <script src="script.js"></script>
+        <script src="script.js"></script>
 </body>
 
 </html>

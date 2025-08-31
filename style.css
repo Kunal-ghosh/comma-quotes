@@ -14,10 +14,82 @@ body {
 
 /* Container */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    display: flex;
     min-height: 100vh;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Left Navigation */
+.left-nav {
+    width: 200px;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    padding: 20px 0;
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.nav-header {
+    padding: 0 20px 20px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 20px;
+}
+
+.nav-header h2 {
+    color: #ecf0f1;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+}
+
+.nav-tabs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-tabs li {
+    margin-bottom: 5px;
+}
+
+.nav-tab {
+    display: flex;
+    align-items: center;
+    padding: 6px 20px;
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    /* border-left: 3px solid transparent; */
+    font-weight: 500;
+    border-radius: 16px;
+}
+
+.nav-tab:hover {
+    background: rgba(255,255,255,0.1);
+    color: #ecf0f1;
+    border-left-color: #3498db;
+}
+
+.nav-tab.active {
+    background: rgba(52, 152, 219, 0.2);
+    color: #3498db;
+    border-left-color: #3498db;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    /* margin-left: 200px; */
+    padding: 20px;
     display: flex;
     flex-direction: column;
 }
@@ -127,11 +199,29 @@ main {
     width: 100%;
 }
 
+.input-output-section
+{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    /* align-items: flex-start; */
+    /* width: 100%; */
+}
+.input-output-only
+{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* align-items: flex-start; */
+    height: 40vh;
+
+}
+
 /* Input and Output sections */
 .input-section {
     background: white;
     padding: 20px;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
     border-radius: 16px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     border: 1px solid #e9ecef;
@@ -144,7 +234,7 @@ main {
 {
     background: white;
     padding: 20px;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
     border-radius: 16px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     border: 1px solid #e9ecef;
@@ -164,6 +254,43 @@ main {
     justify-content: center;
 }
 .output-section label
+{
+    display: block;
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+.output-section-vin
+{
+    background: white;
+    padding: 20px;
+    /* margin-bottom: 15px; */
+    border-radius: 16px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    border: 1px solid #e9ecef;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* height: 40vh; */
+}
+
+.output-section-vin label {
+    display: block;
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+}
+.output-section-vin label
 {
     display: block;
     font-weight: 600;
@@ -435,7 +562,7 @@ button {
 /* Footer */
 footer {
     text-align: center;
-    margin-top: 15px;
+    margin-top: 40px;
     padding-top: 20px;
     border-top: 1px solid #dee2e6;
     color: #6c757d;
@@ -543,7 +670,8 @@ body.dark-mode .theme-toggle:hover {
 }
 
 body.dark-mode .input-section,
-body.dark-mode .output-section {
+body.dark-mode .output-section,
+body.dark-mode .output-section-vin {
     background: #2d2d2d;
     border-color: #444;
     color: #e0e0e0;
@@ -662,6 +790,80 @@ body.dark-mode footer a {
     color: #007bff;
 }
 
+/* VIN Generator Specific Styles */
+.vin-layout {
+    flex-direction: row;
+}
+
+.vin-generator-section {
+    background: white;
+    padding: 20px;
+    /* margin-bottom: 15px; */
+    border-radius: 16px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    border: 1px solid #e9ecef;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 440px;
+}
+
+.vin-options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.generate-btn {
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+.generate-btn:hover {
+    background: linear-gradient(135deg, #218838 0%, #1ea68a 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+}
+
+.disclaimer {
+    background: rgba(255, 193, 7, 0.1);
+    border: 1px solid #ffc107;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+    color: #856404;
+}
+
+/* Dark mode for VIN generator */
+body.dark-mode .vin-generator-section {
+    background: #2d2d2d;
+    border-color: #444;
+    color: #e0e0e0;
+}
+
+body.dark-mode .generate-btn {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+}
+
+body.dark-mode .disclaimer {
+    background: rgba(255, 193, 7, 0.2);
+    border-color: #ffc107;
+    color: #ffc107;
+}
+
+/* Dark mode for left navigation */
+body.dark-mode .left-nav {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
 /* Ad Sidebar */
 .ad-sidebar {
     width: 160px;
@@ -772,9 +974,52 @@ body.dark-mode .info-content ol {
     color: #b0b0b0;
 }
 
-/* Responsive ad sizes */
+/* Responsive Design for Navigation */
 @media (max-width: 768px) {
+    .left-nav {
+        width: 100%;
+        height: auto;
+        position: static;
+        background: linear-gradient(90deg, #2c3e50 0%, #34495e 100%);
+    }
+    
+    .nav-tabs {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .nav-tabs li {
+        flex: 1;
+        margin-bottom: 0;
+    }
+    
+    .nav-tab {
+        text-align: center;
+        border-left: none;
+        border-bottom: 3px solid transparent;
+        padding: 10px 5px;
+        font-size: 14px;
+    }
+    
+    .nav-tab:hover {
+        border-bottom-color: #3498db;
+        border-left-color: transparent;
+    }
+    
+    .nav-tab.active {
+        border-bottom-color: #3498db;
+        border-left-color: transparent;
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+    
     .tool-container {
+        flex-direction: column;
+    }
+    
+    .vin-layout {
         flex-direction: column;
     }
     

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google-adsense-account" content="ca-pub-2975191454646101">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIN Generator - Random Vehicle Identification Numbers</title>
+    <meta name="description" content="Free online VIN (Vehicle Identification Number) generator. Generate random, valid format VINs for testing and development purposes.">
+    <meta name="keywords" content="VIN generator, vehicle identification number, random VIN, automotive testing">
+    <meta name="author" content="Kunal Ghosh">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta property="og:title" content="VIN Generator - Random Vehicle Identification Numbers">
+    <meta property="og:description" content="Free online VIN generator for testing and development purposes.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kunal-ghosh.github.io/comma-quotes/vin-generator.html">
+    <link rel="canonical" href="https://kunal-ghosh.github.io/comma-quotes/vin-generator.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2975191454646101"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <h1>VIN Generator</h1>
+                <!-- <p class="subtitle">Generate random Vehicle Identification Numbers for testing</p> -->
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </header>
+
+            <div class="container-inner">
+                <div class="tool-container vin-layout">
+                    <ul class="nav-tabs">
+                        <li><a href="index.html" class="nav-tab">Comma Quote</a></li>
+                        <li><a href="vin-generator.html" class="nav-tab active">VIN Generator</a></li>
+                    </ul>
+                    <div class="input-output-section">
+                        <div class="vin-generator-section">
+                            <label>VIN Generator Options</label>
+                            
+                            <div class="vin-options">
+                                <div class="option-group">
+                                    <label for="vin-count">Number of VINs:</label>
+                                    <select id="vin-count">
+                                        <option value="1">1 VIN</option>
+                                        <option value="2">2 VINs</option>
+                                        <option value="3">3 VINs</option>
+                                        <option value="4">4 VINs</option>
+                                        <option value="5" selected>5 VINs</option>
+                                    </select>
+                                </div>
+
+                                <div class="option-group">
+                                    <button id="generate-vin-btn" class="generate-btn">Generate VINs</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="output-section-vin">
+                            <label for="vin-output">Generated VINs</label>
+                            <textarea 
+                                id="vin-output" 
+                                readonly 
+                                placeholder="Click 'Generate VINs' to create random Vehicle Identification Numbers..."
+                                rows="10"
+                            ></textarea>
+                            <div class="output-actions">
+                                <button id="copy-vin-btn" type="button">Copy VINs</button>
+                                <button id="clear-vin-btn" type="button">Clear</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ad Space -->
+                    <div class="ad-sidebar">
+                        <div class="ad-container ad-right">
+                            <!-- Ad code will go here -->
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <p>&copy; 2024 Development Tools | <a href="privacy-policy.html">Privacy Policy</a> | Created by <a href="https://github.com/Kunal-ghosh">Kunal Ghosh</a></p>
+                </footer>
+                <section class="info-section">
+                    <div class="info-content">
+                        <h2>About VIN Generator</h2>
+                        <p>A Vehicle Identification Number (VIN) is a unique 17-character code assigned to every motor vehicle. Our VIN generator creates random, properly formatted VINs for testing, development, and educational purposes.</p>
+                        
+                        <h3>VIN Structure:</h3>
+                        <ul>
+                            <li><strong>Positions 1-3:</strong> World Manufacturer Identifier (WMI)</li>
+                            <li><strong>Positions 4-8:</strong> Vehicle Descriptor Section (VDS)</li>
+                            <li><strong>Position 9:</strong> Check digit</li>
+                            <li><strong>Positions 10-17:</strong> Vehicle Identifier Section (VIS)</li>
+                        </ul>
+                        
+                        <h3>Use Cases:</h3>
+                        <ul>
+                            <li>Software testing and development</li>
+                            <li>Database population</li>
+                            <li>Educational purposes</li>
+                            <li>Form testing</li>
+                            <li>API development</li>
+                        </ul>
+    
+                        <div class="disclaimer">
+                            <strong>Disclaimer:</strong> Generated VINs are for testing purposes only and do not correspond to real vehicles.
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+
+            <!-- VIN Information Section -->
+
+        </div>
+    </div>
+
+    <script src="vin-generator.js"></script>
+</body>
+</html>
