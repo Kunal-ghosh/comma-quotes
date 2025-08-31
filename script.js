@@ -7,26 +7,34 @@ const trimCheckbox = document.getElementById('trim-whitespace');
 const removeEmptyCheckbox = document.getElementById('remove-empty');
 const copyBtn = document.getElementById('copy-btn');
 const clearBtn = document.getElementById('clear-btn');
+const themeToggle = document.getElementById("theme-toggle");
+const themeIcon = document.querySelector(".theme-icon");
 
 // Initialize the application
-document.addEventListener('DOMContentLoaded', function() {
-    // Add event listeners
-    inputText.addEventListener('input', processText);
-    separatorSelect.addEventListener('change', processText);
-    quoteButtons.forEach(button => button.addEventListener('click', handleQuoteButtonClick));
-    trimCheckbox.addEventListener('change', processText);
-    removeEmptyCheckbox.addEventListener('change', processText);
-    copyBtn.addEventListener('click', copyToClipboard);
-    clearBtn.addEventListener('click', clearAll);
+document.addEventListener("DOMContentLoaded", function () {
+  // Add event listeners
+  inputText.addEventListener("input", processText);
+  separatorSelect.addEventListener("change", processText);
+  quoteButtons.forEach((button) =>
+    button.addEventListener("click", handleQuoteButtonClick)
+  );
+  trimCheckbox.addEventListener("change", processText);
+  removeEmptyCheckbox.addEventListener("change", processText);
+  copyBtn.addEventListener("click", copyToClipboard);
+  clearBtn.addEventListener("click", clearAll);
+  themeToggle.addEventListener("click", toggleTheme);
 
-    // Set initial focus
-    inputText.focus();
-    
-    // Load example if input is empty
-    if (!inputText.value.trim()) {
-        inputText.value = "apple\nbanana\norange\ngrape\nkiwi";
-        processText();
-    }
+  // Set initial focus
+  inputText.focus();
+
+  // Load example if input is empty
+  if (!inputText.value.trim()) {
+    inputText.value = "apple\nbanana\norange\ngrape\nkiwi";
+    processText();
+  }
+
+  // Initialize theme
+  initializeTheme();
 });
 
 // Main text processing function
@@ -275,6 +283,52 @@ function loadExample(type = 'default') {
     processText();
     inputText.focus();
 }
+
+// Dark Mode Functions
+function initializeTheme() {
+    // Check if user has a saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        enableDarkMode();
+    } else {
+        enableLightMode();
+    }
+}
+
+function toggleTheme() {
+    if (document.body.classList.contains('dark-mode')) {
+        enableLightMode();
+        localStorage.setItem('theme', 'light');
+    } else {
+        enableDarkMode();
+        localStorage.setItem('theme', 'dark');
+    }
+}
+
+function enableDarkMode() {
+    document.body.classList.add('dark-mode');
+    themeIcon.textContent = '☀️';
+    themeToggle.setAttribute('aria-label', 'Switch to light mode');
+}
+
+function enableLightMode() {
+    document.body.classList.remove('dark-mode');
+    themeIcon.textContent = '🌙';
+    themeToggle.setAttribute('aria-label', 'Switch to dark mode');
+}
+
+// Listen for system theme changes
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (!localStorage.getItem('theme')) {
+        if (e.matches) {
+            enableDarkMode();
+        } else {
+            enableLightMode();
+        }
+    }
+});
 
 // Initialize with example
 // loadExample('default');
