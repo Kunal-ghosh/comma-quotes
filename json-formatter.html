@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google-adsense-account" content="ca-pub-2975191454646101">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Formatter - Format and Validate JSON Online</title>
+    <meta name="description" content="Free online JSON formatter and validator. Format, minify, and validate JSON data with syntax highlighting and error detection.">
+    <meta name="keywords" content="JSON formatter, JSON validator, JSON minify, JSON prettify, online JSON tool">
+    <meta name="author" content="Kunal Ghosh">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta property="og:title" content="JSON Formatter - Format and Validate JSON Online">
+    <meta property="og:description" content="Free online JSON formatter and validator for developers.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kunal-ghosh.github.io/comma-quotes/json-formatter.html">
+    <link rel="canonical" href="https://kunal-ghosh.github.io/comma-quotes/json-formatter.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2975191454646101"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <h1>JSON Formatter</h1>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </header>
+
+            <div class="container-inner">
+                <div class="tool-container json-layout">
+                    <ul class="nav-tabs">
+                        <li><a href="index.html" class="nav-tab">Comma Quote</a></li>
+                        <li><a href="vin-generator.html" class="nav-tab">VIN Generator</a></li>
+                        <li><a href="json-formatter.html" class="nav-tab active">JSON Formatter</a></li>
+                    </ul>
+                    <div class="input-output-section">
+                        <div class="json-input-section">
+                            <label for="json-input">JSON Input</label>
+                            <textarea 
+                                id="json-input" 
+                                placeholder="Paste your JSON here to format or validate..."
+                                rows="12"
+                            ></textarea>
+                            <div class="json-actions">
+                                <button id="format-btn" type="button" class="format-btn">Format JSON</button>
+
+                                <button id="validate-btn" type="button" class="validate-btn">Validate</button>
+                                <!-- <button id="clear-input-btn" type="button" class="clear-btn">Clear Input</button> -->
+                            </div>
+                            <div id="error-message" class="error-message" style="display: none;"></div>
+                        </div>
+
+                        <div class="json-output-section">
+                            <label for="json-output">Formatted JSON</label>
+                            <textarea 
+                                id="json-output" 
+                                readonly 
+                                placeholder="Formatted JSON will appear here..."
+                                rows="12"
+                            ></textarea>
+                            <div class="output-actions">
+                                <button id="copy-json-btn" type="button">Copy JSON</button>
+                                <!-- <button id="clear-output-btn" type="button">Clear Output</button> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ad Space -->
+                    <div class="ad-sidebar">
+                        <div class="ad-container ad-right">
+                            <!-- Ad code will go here -->
+                        </div>
+                    </div>
+                </div>
+                
+                <footer>
+                    <p>&copy; 2024 Development Tools | <a href="privacy-policy.html">Privacy Policy</a> | Created by <a href="https://github.com/Kunal-ghosh">Kunal Ghosh</a></p>
+                </footer>
+                
+                <!-- JSON Information Section -->
+                <section class="info-section">
+                    <div class="info-content">
+                        <h2>About JSON Formatter</h2>
+                        <p>JSON (JavaScript Object Notation) is a lightweight data-interchange format. Our JSON formatter helps you format, validate, and minify JSON data for better readability and debugging.</p>
+                        
+                        <h3>Features:</h3>
+                        <ul>
+                            <li><strong>Format:</strong> Pretty-print JSON with proper indentation</li>
+                            <li><strong>Minify:</strong> Remove whitespace to reduce file size</li>
+                            <li><strong>Validate:</strong> Check for syntax errors and invalid JSON</li>
+                            <li><strong>Copy:</strong> Easy copying of formatted output</li>
+                        </ul>
+                        
+                        <h3>Use Cases:</h3>
+                        <ul>
+                            <li>API response formatting</li>
+                            <li>Configuration file validation</li>
+                            <li>Data structure debugging</li>
+                            <li>JSON minification for production</li>
+                            <li>Educational and learning purposes</li>
+                        </ul>
+
+                        <div class="disclaimer">
+                            <strong>Note:</strong> All JSON processing is done locally in your browser. No data is sent to external servers.
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="json-formatter.js"></script>
+</body>
+</html>

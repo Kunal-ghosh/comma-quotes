@@ -6,7 +6,8 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f8f9fa;
@@ -30,13 +31,13 @@ body {
     left: 0;
     top: 0;
     overflow-y: auto;
-    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
 
 .nav-header {
     padding: 0 20px 20px 20px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     margin-bottom: 20px;
 }
 
@@ -74,7 +75,7 @@ body {
 }
 
 .nav-tab:hover {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     color: #ecf0f1;
     border-left-color: #3498db;
 }
@@ -102,6 +103,7 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 /* Header */
 header {
     text-align: center;
@@ -138,14 +140,14 @@ header h1 {
     cursor: pointer;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .theme-toggle:hover {
     background: rgba(255, 255, 255, 1);
     border-color: #007bff;
     transform: scale(1.1);
-    box-shadow: 0 4px 15px rgba(0,123,255,0.2);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
 }
 
 .theme-icon {
@@ -199,22 +201,20 @@ main {
     width: 100%;
 }
 
-.input-output-section
-{
+.input-output-section {
     display: flex;
     flex-direction: row;
     gap: 15px;
     /* align-items: flex-start; */
     /* width: 100%; */
 }
-.input-output-only
-{
+
+.input-output-only {
     display: flex;
     flex-direction: column;
     gap: 15px;
     /* align-items: flex-start; */
     height: 40vh;
-
 }
 
 /* Input and Output sections */
@@ -223,20 +223,20 @@ main {
     padding: 20px;
     /* margin-bottom: 15px; */
     border-radius: 16px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     border: 1px solid #e9ecef;
     flex: 1;
     display: flex;
     flex-direction: column;
     width: 350px;
 }
-.output-section
-{
+
+.output-section {
     background: white;
     padding: 20px;
     /* margin-bottom: 15px; */
     border-radius: 16px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     border: 1px solid #e9ecef;
     flex: 1;
     display: flex;
@@ -253,8 +253,8 @@ main {
     display: flex;
     justify-content: center;
 }
-.output-section label
-{
+
+.output-section label {
     display: block;
     font-weight: 600;
     color: #495057;
@@ -264,16 +264,12 @@ main {
     justify-content: center;
 }
 
-
-
-
-.output-section-vin
-{
+.output-section-vin {
     background: white;
     padding: 20px;
     /* margin-bottom: 15px; */
     border-radius: 16px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     border: 1px solid #e9ecef;
     flex: 1;
     display: flex;
@@ -290,8 +286,8 @@ main {
     display: flex;
     justify-content: center;
 }
-.output-section-vin label
-{
+
+.output-section-vin label {
     display: block;
     font-weight: 600;
     color: #495057;
@@ -300,13 +296,14 @@ main {
     display: flex;
     justify-content: center;
 }
+
 textarea {
     flex: 1;
     width: 100%;
     padding: 15px;
     border: 2px solid #e9ecef;
     border-radius: 8px;
-    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
     font-size: 14px;
     line-height: 1.5;
     resize: vertical;
@@ -329,15 +326,39 @@ textarea::placeholder {
     color: #6c757d;
 }
 
+#json-input {
+    flex: 1;
+    width: 100%;
+    padding: 15px;
+    /* border: 2px solid #e9ecef; */
+    border-radius: 8px;
+    font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    resize: vertical;
+    transition: border-color 0.2s ease;
+    height: 65vh;
+}
+#json-output {
+    flex: 1;
+    width: 100%;
+    padding: 15px;
+    /* border: 2px solid #e9ecef; */
+    border-radius: 8px;
+    font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    resize: vertical;
+    transition: border-color 0.2s ease;
+    height: 65vh;
+}
 /* Options section */
 .options-section {
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
     padding: 15px;
     border-radius: 16px;
-    box-shadow: 
-        0 4px 20px rgba(0,0,0,0.08),
-        0 2px 8px rgba(0,0,0,0.04);
-    border: 1px solid rgba(255,255,255,0.8);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.8);
     position: sticky;
     top: 20px;
     backdrop-filter: blur(10px);
@@ -349,9 +370,7 @@ textarea::placeholder {
 }
 
 .options-section:hover {
-    box-shadow: 
-        0 6px 30px rgba(0,0,0,0.12),
-        0 4px 12px rgba(0,0,0,0.06);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.06);
     transform: translateY(-2px);
 }
 
@@ -366,7 +385,7 @@ textarea::placeholder {
 }
 
 .options-section h3::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -380,7 +399,7 @@ textarea::placeholder {
 .option-group {
     /* margin-bottom: 24px; */
     padding: 20px;
-    background: rgba(255,255,255,0.6);
+    background: rgba(255, 255, 255, 0.6);
     border-radius: 16px;
     /* border: 1px solid rgba(0,123,255,0.1); */
     transition: all 0.2s ease;
@@ -390,8 +409,8 @@ textarea::placeholder {
 }
 
 .option-group:hover {
-    background: rgba(255,255,255,0.8);
-    border-color: rgba(0,123,255,0.2);
+    background: rgba(255, 255, 255, 0.8);
+    border-color: rgba(0, 123, 255, 0.2);
     transform: translateX(2px);
 }
 
@@ -399,7 +418,7 @@ textarea::placeholder {
     margin-bottom: 0;
 }
 
-.option-group > label {
+.option-group>label {
     display: block;
     font-weight: 600;
     color: #2c3e50;
@@ -436,7 +455,7 @@ select:focus {
     padding: 12px 16px;
     border: 2px solid #e9ecef;
     border-radius: 8px;
-    background: rgba(255,255,255,0.6);
+    background: rgba(255, 255, 255, 0.6);
     color: #495057;
     font-size: 13px;
     font-weight: 500;
@@ -448,11 +467,11 @@ select:focus {
 }
 
 .quote-btn:hover {
-    background: rgba(0,123,255,0.05);
-    border-color: rgba(0,123,255,0.3);
+    background: rgba(0, 123, 255, 0.05);
+    border-color: rgba(0, 123, 255, 0.3);
     color: #007bff;
     transform: translateY(-1px);
-    box-shadow: 0 2px 8px rgba(0,123,255,0.15);
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.15);
 }
 
 .quote-btn.active {
@@ -460,13 +479,13 @@ select:focus {
     border-color: #007bff;
     color: white;
     font-weight: 600;
-    box-shadow: 0 2px 12px rgba(0,123,255,0.3);
+    box-shadow: 0 2px 12px rgba(0, 123, 255, 0.3);
 }
 
 .quote-btn.active:hover {
     background: linear-gradient(135deg, #0056b3 0%, #004085 100%);
     transform: translateY(-1px);
-    box-shadow: 0 4px 16px rgba(0,123,255,0.4);
+    box-shadow: 0 4px 16px rgba(0, 123, 255, 0.4);
 }
 
 /* Checkboxes */
@@ -488,19 +507,19 @@ label:has(input[type="checkbox"]) {
     border-radius: 8px;
     transition: all 0.2s ease;
     color: #495057;
-    background: rgba(255,255,255,0.4);
-    border: 1px solid rgba(0,123,255,0.1);
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(0, 123, 255, 0.1);
 }
 
 label:has(input[type="checkbox"]):hover {
-    background: rgba(0,123,255,0.05);
-    border-color: rgba(0,123,255,0.2);
+    background: rgba(0, 123, 255, 0.05);
+    border-color: rgba(0, 123, 255, 0.2);
     transform: translateX(2px);
     color: #007bff;
 }
 
 label:has(input[type="checkbox"]:checked) {
-    background: rgba(0,123,255,0.1);
+    background: rgba(0, 123, 255, 0.1);
     border-color: #007bff;
     color: #007bff;
     font-weight: 600;
@@ -508,7 +527,7 @@ label:has(input[type="checkbox"]:checked) {
 
 /* Output actions */
 .output-actions {
-    margin-top: 15px;
+    /* margin-top: 15px; */
     display: flex;
     gap: 10px;
     padding-bottom: 15px;
@@ -584,28 +603,30 @@ footer a:hover {
         flex-direction: column;
         gap: 20px;
     }
-    
+
     .options-section {
         position: static;
         order: -1;
         width: 100%;
         min-width: auto;
     }
-    
+
     header h1 {
         font-size: 2rem;
     }
-    
+
     nav {
         gap: 15px;
         flex-wrap: wrap;
     }
-    
+
     .container {
         padding: 15px;
     }
-    
-    .input-section, .output-section, .options-section {
+
+    .input-section,
+    .output-section,
+    .options-section {
         padding: 20px;
     }
 }
@@ -614,21 +635,21 @@ footer a:hover {
     .output-actions {
         flex-direction: column;
     }
-    
+
     nav {
         flex-direction: column;
         align-items: center;
     }
-    
+
     header h1 {
         font-size: 1.75rem;
     }
-    
+
     .quote-buttons {
         flex-direction: column;
         gap: 8px;
     }
-    
+
     .quote-btn {
         padding: 14px 20px;
         font-size: 14px;
@@ -641,8 +662,8 @@ body.dark-mode {
     color: #e0e0e0;
 }
 
-body.dark-mode .label, body.dark-mode label
-{
+body.dark-mode .label,
+body.dark-mode label {
     color: #e0e0e0;
 }
 
@@ -679,7 +700,7 @@ body.dark-mode .output-section-vin {
 
 body.dark-mode .options-section {
     background: linear-gradient(135deg, #2d2d2d 0%, #1f1f1f 100%);
-    border-color: rgba(255,255,255,0.1);
+    border-color: rgba(255, 255, 255, 0.1);
 }
 
 body.dark-mode .options-section h3 {
@@ -688,15 +709,15 @@ body.dark-mode .options-section h3 {
 
 body.dark-mode .option-group {
     background: rgba(40, 40, 40, 0.6);
-    border-color: rgba(255,255,255,0.1);
+    border-color: rgba(255, 255, 255, 0.1);
 }
 
 body.dark-mode .option-group:hover {
     background: rgba(50, 50, 50, 0.8);
-    border-color: rgba(0,123,255,0.3);
+    border-color: rgba(0, 123, 255, 0.3);
 }
 
-body.dark-mode .option-group > label {
+body.dark-mode .option-group>label {
     color: #e0e0e0;
 }
 
@@ -734,8 +755,8 @@ body.dark-mode .quote-btn {
 }
 
 body.dark-mode .quote-btn:hover {
-    background: rgba(0,123,255,0.15);
-    border-color: rgba(0,123,255,0.4);
+    background: rgba(0, 123, 255, 0.15);
+    border-color: rgba(0, 123, 255, 0.4);
     color: #007bff;
 }
 
@@ -747,18 +768,18 @@ body.dark-mode .quote-btn.active {
 
 body.dark-mode label:has(input[type="checkbox"]) {
     background: rgba(40, 40, 40, 0.6);
-    border-color: rgba(255,255,255,0.1);
+    border-color: rgba(255, 255, 255, 0.1);
     color: #e0e0e0;
 }
 
 body.dark-mode label:has(input[type="checkbox"]):hover {
-    background: rgba(0,123,255,0.15);
-    border-color: rgba(0,123,255,0.3);
+    background: rgba(0, 123, 255, 0.15);
+    border-color: rgba(0, 123, 255, 0.3);
     color: #007bff;
 }
 
 body.dark-mode label:has(input[type="checkbox"]:checked) {
-    background: rgba(0,123,255,0.2);
+    background: rgba(0, 123, 255, 0.2);
     border-color: #007bff;
     color: #007bff;
 }
@@ -800,7 +821,7 @@ body.dark-mode footer a {
     padding: 20px;
     /* margin-bottom: 15px; */
     border-radius: 16px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     border: 1px solid #e9ecef;
     flex: 1;
     display: flex;
@@ -944,7 +965,8 @@ body.dark-mode .ad-container::before {
     margin-bottom: 15px;
 }
 
-.info-content ul, .info-content ol {
+.info-content ul,
+.info-content ol {
     color: #6c757d;
     line-height: 1.6;
     margin-left: 20px;
@@ -982,17 +1004,17 @@ body.dark-mode .info-content ol {
         position: static;
         background: linear-gradient(90deg, #2c3e50 0%, #34495e 100%);
     }
-    
+
     .nav-tabs {
         display: flex;
         justify-content: space-around;
     }
-    
+
     .nav-tabs li {
         flex: 1;
         margin-bottom: 0;
     }
-    
+
     .nav-tab {
         text-align: center;
         border-left: none;
@@ -1000,34 +1022,34 @@ body.dark-mode .info-content ol {
         padding: 10px 5px;
         font-size: 14px;
     }
-    
+
     .nav-tab:hover {
         border-bottom-color: #3498db;
         border-left-color: transparent;
     }
-    
+
     .nav-tab.active {
         border-bottom-color: #3498db;
         border-left-color: transparent;
     }
-    
+
     .main-content {
         margin-left: 0;
     }
-    
+
     .tool-container {
         flex-direction: column;
     }
-    
+
     .vin-layout {
         flex-direction: column;
     }
-    
+
     .ad-sidebar {
         width: 100%;
         order: -1;
     }
-    
+
     .ad-right {
         width: 100%;
         height: 90px;
