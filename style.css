@@ -710,6 +710,68 @@ body.dark-mode .ad-container::before {
     color: #888;
 }
 
+/* Info Section */
+.info-section {
+    margin: 40px 0 20px 0;
+    padding: 30px;
+    background: rgba(248, 249, 250, 0.8);
+    border-radius: 12px;
+    border: 1px solid #dee2e6;
+}
+
+.info-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.info-content h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.info-content h3 {
+    color: #495057;
+    margin: 20px 0 10px 0;
+    font-size: 1.2rem;
+}
+
+.info-content p {
+    color: #6c757d;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.info-content ul, .info-content ol {
+    color: #6c757d;
+    line-height: 1.6;
+    margin-left: 20px;
+}
+
+.info-content li {
+    margin-bottom: 5px;
+}
+
+/* Dark mode info section */
+body.dark-mode .info-section {
+    background: rgba(45, 45, 45, 0.8);
+    border-color: #444;
+}
+
+body.dark-mode .info-content h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .info-content h3 {
+    color: #e0e0e0;
+}
+
+body.dark-mode .info-content p,
+body.dark-mode .info-content ul,
+body.dark-mode .info-content ol {
+    color: #b0b0b0;
+}
+
 /* Responsive ad sizes */
 @media (max-width: 768px) {
     .tool-container {
