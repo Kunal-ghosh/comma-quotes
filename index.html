@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comma Quote - Online Text Separator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <h1>Comma Quote</h1>
+            <p class="subtitle">The Online Comma Separator</p>
+        </header>
+        
+        <nav>
+            <a href="#" class="nav-link active">Home</a>
+            <a href="#" class="nav-link">About</a>
+            <a href="#" class="nav-link">FAQ</a>
+        </nav>
+        <div class="container-inner">
+        <main>
+            <div class="tool-container">
+                <div class="input-output-section">
+                <div class="input-section">
+                    <label for="input-text">Input</label>
+                    <textarea 
+                        id="input-text" 
+                        placeholder="Enter your text here (one item per line or separated by spaces/commas)"
+                        rows="8"
+                    ></textarea>
+                </div>
+                <div class="output-section">
+                    <label for="output-text">Output</label>
+                    <div class="output-actions">
+                        <button id="copy-btn" type="button">Copy to Clipboard</button>
+                        <button id="clear-btn" type="button">Clear All</button>
+                    </div>
+
+                    <textarea 
+                        id="output-text" 
+                        readonly 
+                        placeholder="Formatted output will appear here..."
+                        rows="8"
+                    ></textarea>
+                </div>
+                </div>
+                <div class="options-section">
+                    <h3>Options</h3>
+                    
+                    <div class="option-group">
+                        <label for="separator">Separator Character</label>
+                        <select id="separator">
+                            <option value=",">Comma (,)</option>
+                            <option value=";">Semicolon (;)</option>
+                            <option value="|">Pipe (|)</option>
+                            <option value=" ">Space ( )</option>
+                            <option value="\n">New Line</option>
+                            <option value="\t">Tab</option>
+                        </select>
+                    </div>
+
+                    <div class="option-group">
+                        <label>Quote Style</label>
+                        <div class="quote-buttons">
+                            <button type="button" class="quote-btn" data-quote="none">No Quote</button>
+                            <button type="button" class="quote-btn active" data-quote="single">Single Quote</button>
+                            <button type="button" class="quote-btn" data-quote="double">Double Quote</button>
+                        </div>
+                    </div>
+
+                    <div class="option-group">
+                        <label>
+                            <input type="checkbox" id="trim-whitespace" checked>
+                            Trim Whitespace
+                        </label>
+                    </div>
+
+                    <div class="option-group">
+                        <label>
+                            <input type="checkbox" id="remove-empty" checked>
+                            Remove Empty Items
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Comma Quote Tool | <a href="#disclaimer">Disclaimer</a></p>
+        </footer>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
